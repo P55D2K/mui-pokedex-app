@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Box, Typography } from '@mui/material';
 import { List } from '@mui/material';
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -19,13 +20,14 @@ const Header = () => {
         justifyContent: 'space-around',
         alignItems: 'center',
     }}>
-      <img
+      <Image
         src="/imgs/logo.svg"
         width={150}
         height={150}
         draggable={false}
         alt="Pokedex"
         className="cursor-pointer object-contain"
+        unoptimized={true}
       />
 
       <List

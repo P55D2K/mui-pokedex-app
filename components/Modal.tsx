@@ -4,6 +4,7 @@ import MuiModal from "@mui/material/Modal";
 import { Box, Button } from "@mui/material";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function Modal() {
   const [ showModal, setShowModal ] = useRecoilState(modalState);
@@ -50,10 +51,11 @@ function Modal() {
           X
         </Button>
 
-        <img
+        <Image
           src={pokemon?.sprites?.front_default}
           alt={pokemon?.name}
           className="w-64 h-64 object-contain"
+          unoptimized={true}
         />
         <h1 className="text-3xl font-bold text-white uppercase">{pokemon?.name}</h1>
         <p className="text-xl text-white">Height: {pokemon?.height}</p>

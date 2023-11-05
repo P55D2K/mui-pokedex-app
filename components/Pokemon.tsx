@@ -3,6 +3,7 @@ import axios from "axios"
 import { Box } from "@mui/material"
 import { useRecoilState } from "recoil"
 import { modalState, pokemonState } from "@/atoms/modalAtom"
+import Image from "next/image"
 
 interface PokemonProps {
   name: string
@@ -65,13 +66,14 @@ const Pokemon = ({
         <h1 className="text-sm font-bold uppercase">{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
         <h1 className="text-gray-400">#{id}</h1>
       </Box>
-      <img
+      <Image
         src={image_url}
         width={300}
         height={300}
         draggable={false}
         alt={name}
         className="cursor-pointer object-contain"
+        unoptimized={true}
       />
     </Box>
   )
