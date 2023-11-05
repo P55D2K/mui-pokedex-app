@@ -79,7 +79,7 @@ function Modal() {
         >
           <h1 className="text-sm font-bold uppercase">Abilities</h1>
           {pokemon?.abilities?.map((item: any) => (
-              <h1 className="text-gray-400 capitalize">{item.ability.name}</h1>
+            <h1 className="text-gray-400 capitalize" key={item.ability.name}>{item.ability.name}</h1>
           ))}
         </Box>
 
@@ -100,7 +100,7 @@ function Modal() {
         >
           <h1 className="text-sm font-bold uppercase">All Moves</h1>
           {pokemon?.moves?.map((item: any) => (
-              <h1 className="text-gray-400 capitalize">{item.move.name}</h1>
+            <h1 className="text-gray-400 capitalize" key={item.move.name}>{item.move.name}</h1>
           ))}
         </Box>
       </Box>
